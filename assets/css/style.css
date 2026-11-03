@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --alert-color: #E77C40;
+    --background-color-dark: #26335D;
+    --danger-color: #E74040;
+    --disablad-elemet-color: #8EC2F2;
+    --faded-secundary-color: #DDEEFE;
+    --light-color-text: #FFFFFF;
+    --muted-text-color: #BDBDBD;
+    --primary-text-color: #FF6551;
+    --second-text-color: #737373;
+    --secundary-color: #2435A1;
+    --secundary-text-color: #2435A1;
+    --success-text-color: #2DC071;
+    --text-color: #252B42;
+
+    --font-family: "Montserrat", sans-serif;
+
+    --h1-size: 58px;
+    --h1-weight: 700;
+    --h1-line-height: 80px;
+    --h1-letter-spacing: 0.2px;
+
+    --h2-size: 40px;
+    --h2-weight: 700;
+    --h2-line-height: 50px;
+    --h2-letter-spacing: 0.2px;
+
+    --h3-size: 24px;
+    --h3-weight: 700;
+    --h3-line-height: 32px;
+    --h3-letter-spacing: 0.1px;
+
+    --h4-size: 20px;
+    --h4-weight: 400;
+    --h4-line-height: 30px;
+    --h4-letter-spacing: 0.2px;
+
+    --h5-size: 16px;
+    --h5-weight: 700;
+    --h5-line-height: 24px;
+    --h5-letter-spacing: 0.1px;
+
+    --h6-size: 14px;
+    --h6-weight: 700;
+    --h6-line-height: 24px;
+    --h6-letter-spacing: 0.2px;
+
+    --paragraph-size: 14px;
+    --paragraph-weight: 400;
+    --paragraph-line-height: 20px;
+    --paragraph-letter-spacing: 0.2px;
+
+    --small-size: 12px;
+    --small-weight: 400;
+    --small-line-height: 16px;
+    --small-letter-spacing: 0.2px;
+
+    --link-size: 14px;
+    --link-weight: 500;
+    --link-line-height: 24px;
+    --link-letter-spacing: 0.2px;
+
+    --button-size: 14px;
+    --button-weight: 700;
+    --button-line-height: 22px;
+    --button-letter-spacing: 0.2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: var(--background-color-dark);
+}
+
+h1 {
+    font-size: var(--h1-size);
+    font-weight: var(--h1-weight);
+    line-height: var(--h1-line-height);
+    letter-spacing: var(--h1-letter-spacing);
+}
+
+h2 {
+    font-size: var(--h2-size);
+    font-weight: var(--h2-weight);
+    line-height: var(--h2-line-height);
+    letter-spacing: var(--h2-letter-spacing);
+}
+
+h3 {
+    font-size: var(--h3-size);
+    font-weight: var(--h3-weight);
+    line-height: var(--h3-line-height);
+    letter-spacing: var(--h3-letter-spacing);
+}
+
+h4 {
+    font-size: var(--h4-size);
+    font-weight: var(--h4-weight);
+    line-height: var(--h4-line-height);
+    letter-spacing: var(--h4-letter-spacing);
+}
+
+h5 {
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    line-height: var(--h5-line-height);
+    letter-spacing: var(--h5-letter-spacing);
+}
+
+p {
+    font-size: var(--paragraph-size);
+    font-weight: var(--paragraph-weight);
+    line-height: var(--paragraph-line-height);
+    letter-spacing: var(--paragraph-letter-spacing);
+}
+
+a {
+    font-size: var(--link-size);
+    font-weight: var(--link-weight);
+    line-height: var(--link-line-height);
+    letter-spacing: var(--link-letter-spacing);
+    text-decoration: none;
+}
+
+button {
+    font-family: var(--button-size);
+    font-weight: var(--button-weight);
+    line-height: var(--button-line-height);
+    letter-spacing: var(--button-letter-spacing);
+    border: none;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    gap: 87px;
+    padding: 30px 0 29px 0;
+
+    background-color: var(--background-color-dark);
+}
+
+header h3 {
+    color: var(--light-color-text);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 21px;
+
+}
+
+nav a {
+    color: var(--light-color-text);
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--primary-text-color);
+}
+
+.log {
+    display: flex;
+    align-items: center;
+
+    gap: 45px;
+    padding-left: 240px;
+}
+
+.log button {
+    color: var(--light-color-text);
+    background-color: var(--primary-text-color);
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 15px 25px;
+}
+
+.log button:hover {
+    color: var(--primary-text-color);
+    background-color: var(--background-color-dark);
+
+    border: 2px solid var(--primary-text-color);
+
+    padding: 13px 23px;
+}
+
+/*welcome*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 100px 0;
+    padding: 0 100px;
+
+    width: 100%;
+    max-width: 1440px;
+}
+
+.welcome {
+    display: flex;
+
+    gap: 230px;
+    padding-top: 71px;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 573px;
+
+    gap: 30px;
+    padding: 148px 0 148px 0;
+}
+
+.welcome-text h5 {
+    color: var(--primary-text-color);
+}
+
+.welcome-text h1 {
+    color: var(--light-color-text);
+
+    max-width: 542px;
+}
+
+.welcome-text h4 {
+    color: var(--light-color-text);
+
+    max-width: 338px;
+}
+
+.welcome-button {
+    display: flex;
+    gap: 20px;
+}
+
+.welcome-button button {
+    padding: 15px 40px;
+
+    border-radius: 5px;
+}
+
+.welcome-button-1 {
+    color: var(--light-color-text);
+    background-color: var(--primary-text-color);
+}
+
+.welcome-button-1:hover {
+    color: var(--primary-text-color);
+    background-color: var(--background-color-dark);
+
+    border: 2px solid var(--primary-text-color);
+
+    padding: 13px 38px;
+}
+
+.welcome-button-2 {
+    color: var(--primary-text-color);
+    background-color: var(--background-color-dark);
+
+    border: 2px solid var(--primary-text-color);
+}
+
+.welcome-button-2:hover {
+    color: var(--light-color-text);
+    background-color: var(--primary-text-color);
+}
+
+.welcome-img {
+    max-width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+/*about*/
+
+.about {
+    display: flex;
+
+    padding: 160px 100px;
+    gap: 156px;
+
+    width: 1440px;
+
+    background: var(--light-color-text);
+}
+
+.about-img {
+    width: 508px;
+    height: auto;
+
+    object-fit: cover;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 35px;
+}
+
+.about-text::before {
+    content: '';
+    display: block;
+
+    width: 94px;
+    height: 7px;
+
+    background-color: var(--secundary-color);
+}
+
+.about-text h2 {
+    color: var(--text-color);
+
+    max-width: 259px;
+}
+
+.about-text p {
+    color: var(--second-text-color);
+
+    max-width: 345px;
+}
+
+.about-text a {
+    color: var(--primary-text-color);
+
+    max-width: 85px;
+}
+
+.about-text a:hover {
+    color: var(--secundary-text-color);
+
+    border-bottom: 2px solid var(--primary-text-color);
+
+    line-height: 22px;
+}
+
+/*courses*/
+.course {
+    display: flex;
+
+    padding: 160px 100px;
+    gap: 156px;
+
+    width: 1440px;
+
+    background: var(--light-color-text);
+}
+
+.course-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 35px;
+
+    max-width: 507px;
+}
+
+.course-text h2 {
+    color: var(--text-color);
+
+    max-width: 420px;
+}
+
+.course-text p {
+    color: var(--second-text-color);
+
+    max-width: 345px;
+}
+
+.course-text a {
+    color: var(--primary-text-color);
+
+    max-width: 85px;
+}
+
+.course-card {
+    display: flex;
+    align-items: center;
+
+    gap: 52px;
+}
+
+.div-course-1 {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.course-card-course {
+    display: flex;
+    flex-direction: column;
+
+    width: 217px;
+    height: 316px;
+
+    gap: 20px;
+    padding: 35px 40px;
+
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.book-closed {
+    width: 26.92px;
+    height: 32px;
+
+    object-fit: cover;
+}
+
+.board {
+    width: 32px;
+    height: 32px;
+
+    object-fit: cover;
+}
+
+.book-open {
+    width: 32px;
+    height: 24.45px;
+}
+
+.book-closed,
+.board,
+.book-open {
+    box-sizing: content-box;
+
+    border-radius: 10px;
+
+    padding: 22px 19px;
+
+    background-color: var(--faded-secundary-color);
+}
+
+.course-card-course h5 {
+    color: var(--text-color);
+
+    max-width: 137px;
+}
+
+.course-card-course h5::after {
+    content: '';
+    display: block;
+
+    width: 50px;
+    height: 2px;
+
+    margin-top: 20px;
+
+    background-color: var(--danger-color);
+}
+
+.course-card-course p {
+    color: var(--second-text-color);
+
+    max-width: 132px;
+}
