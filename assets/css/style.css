@@ -571,7 +571,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    padding: 160px 198px;
+    padding: 160px 100px;
     gap: 80px;
 
     width: 1440px;
@@ -606,6 +606,7 @@ main {
 
 .product-products {
     display: flex;
+    justify-content: center;
 }
 
 .product-type {
@@ -751,7 +752,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    padding: 160px 198px;
+    padding: 160px 100px;
     gap: 80px;
 
     width: 1440px;
@@ -783,3 +784,151 @@ main {
 
     max-width: 462px;
 }
+
+.price-description {
+    display: flex;
+    justify-content: center;
+
+    gap: 31px;
+    padding: 50px 40px;
+}
+
+.price-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+    padding: 50px 40px;
+
+    min-width: 330px;
+    min-height: 980px;
+
+    box-shadow: var(--box-shadow);
+}
+
+.price-price:hover {
+    background-color: var(--background-color-dark);
+
+    cursor: pointer;
+}
+
+.price-price .heart {
+    box-sizing: content-box;
+
+    border-radius: 200px;
+
+    width: 40px;
+    height: auto;
+
+    padding: 20px;
+
+    background-color: var(--secundary-color);
+}
+
+.price-price h3 {
+    color: var(--text-color);
+
+    max-width: 64px;
+}
+
+.price-price:hover h3 {
+    color: var(--light-color-text);
+}
+
+.price-price h6 {
+    color: var(--second-text-color);
+
+    max-width: 147px;
+}
+
+.price-price:hover h6 {
+    color: var(--light-color-text);
+}
+
+.price-months {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-months h2 {
+    color: var(--primary-text-color);
+
+    max-width: 68px;
+}
+
+.price-months h6 {
+    color: var(--disablad-elemet-color);
+
+    max-width: 79px;
+}
+
+.price-price p {
+    color: var(--second-text-color);
+
+    max-width: 200px;
+}
+
+.price-price:hover p {
+    color: var(--light-color-text);
+}
+
+.price-price button {
+    max-width: 250px;
+
+    color: var(--light-color-text);
+    background-color: var(--primary-text-color);
+
+    padding: 15px 84px;
+
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.price-price button:hover {
+    background-color: var(--background-color-dark);
+
+    border: 2px solid var(--primary-text-color);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 250px;
+    max-height: 236px;
+
+    gap: 15px;
+}
+
+.list-list {
+    display: flex;
+    align-items: center;
+}
+
+.list-list img {
+    box-sizing: content-box;
+
+    width: 16px;
+    height: 11.13px;
+
+    padding: 15px;
+
+    border-radius: 200px;
+
+    background-color: var(--success-text-color);
+}
+
+.list-list img .check-none {
+    background-color: var(--muted-text-color);
+}
+
+.list-list h6 {
+    padding: 4px 10px;
+
+    max-width: 175px;
+}
+
+/*testimonials*/
