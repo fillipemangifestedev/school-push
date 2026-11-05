@@ -1102,6 +1102,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     padding: 0 100px;
 
@@ -1109,20 +1110,74 @@ footer {
     max-width: 1440px;
 }
 
+.footer-links {
+    display: flex;
+
+    gap: 30px;
+    padding: 0 0 52px 0;
+}
+
 .links {
     display: flex;
+    flex-direction: column;
+
+    gap: 25px;
 }
 
-.company {
-    width: 148px;
-}
-
-.company h5 {
+.links h5 {
     color: var(--light-color-text);
 }
 
-.company-link {}
+.links-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-.company-link a {
+.links-links a {
     color: var(--light-color-text);
+}
+
+.links-img {
+    display: flex;
+
+    gap: 10px;
+}
+
+.fone-img {
+    width: 22.81px;
+    height: 22.81px;
+}
+
+.local-img {
+    width: 24px;
+    height: 30px;
+}
+
+.email-img {
+    width: 26px;
+    height: 20px;
+}
+
+.links-img h6 {
+    color: var(--light-color-text);
+}
+
+/*rights*/
+.rights {
+    display: flex;
+
+    gap: 580px;
+
+    padding: 25px 195px;
+}
+
+.rights h6 {
+    color: var(--light-color-text);
+}
+
+.rights-social {
+    display: flex;
+
+    gap: 20.5px;
 }
