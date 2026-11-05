@@ -932,3 +932,197 @@ main {
 }
 
 /*testimonials*/
+.testimonials {
+    display: flex;
+    flex-direction: column;
+
+    padding: 160px 100px;
+    gap: 80px;
+
+    width: 1440px;
+}
+
+.testimonials-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.testimonials-text h6 {
+    color: var(--primary-text-color);
+
+    max-width: 117px;
+}
+
+.testimonials-text h2 {
+    color: var(--light-color-text);
+
+    max-width: 500px;
+}
+
+.testimonials-text p {
+    color: var(--light-color-text);
+
+    max-width: 462px;
+}
+
+.testimonials-testimonials {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.testimonials-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 25px;
+
+    width: 348px;
+
+    background: var(--light-color-text);
+}
+
+.testimonials-card-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+    padding: 30px;
+}
+
+.testimonials-star {
+    display: flex;
+
+    gap: 1.83px;
+}
+
+.testimonials-star img {
+    width: 18.35px;
+}
+
+.testimonials-card p {
+    max-width: 159px;
+
+    color: var(--second-text-color);
+}
+
+.testimonials-person {
+    display: flex;
+
+    gap: 15px;
+}
+
+.testimonials-person img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+}
+
+.testimonials-name h6 {
+    color: var(--primary-text-color);
+}
+
+.testimonials-name small {
+    color: var(--text-color);
+}
+
+/*newsletter*/
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 160px 100px;
+    gap: 80px;
+
+    width: 1440px;
+
+    background-color: var(--light-color-text);
+}
+
+.newsletter-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.newsletter-text h6 {
+    color: var(--primary-text-color);
+}
+
+.newsletter-text h2 {
+    color: var(--text-color);
+}
+
+.newsletter-text p {
+    color: var(--second-text-color);
+
+    width: 462px;
+
+    text-align: center;
+}
+
+.newsletter-label {
+    display: flex;
+
+    align-items: center;
+}
+
+.newsletter-email input {
+    width: 688px;
+    height: 58px;
+
+    padding-left: 20px;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    background-color: #fafafa;
+}
+
+.newsletter-email button {
+    padding: 15px 22.5px;
+
+    color: var(--light-color-text);
+    background-color: var(--primary-text-color);
+
+    border: 2px solid var(--primary-text-color);
+    border-radius: 5px;
+}
+
+/*rodapé*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 100px;
+
+    width: 100%;
+    max-width: 1440px;
+}
+
+.links {
+    display: flex;
+}
+
+.company {
+    width: 148px;
+}
+
+.company h5 {
+    color: var(--light-color-text);
+}
+
+.company-link {}
+
+.company-link a {
+    color: var(--light-color-text);
+}
