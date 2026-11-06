@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+    /*colors*/
     --alert-color: #E77C40;
     --background-color-dark: #26335D;
     --danger-color: #E74040;
@@ -17,6 +18,7 @@
 
     --box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 
+    /*typography*/
     --font-family: "Montserrat", sans-serif;
 
     --h1-size: 58px;
@@ -233,6 +235,7 @@ main {
 
     gap: 230px;
     padding-top: 71px;
+    margin-bottom: 80px;
 }
 
 .welcome-text {
@@ -867,17 +870,23 @@ main {
     align-items: center;
     justify-content: center;
 
+    flex: 1 1 280px;
+
     gap: 35px;
     padding: 50px 40px;
 
+    position: relative;
+
     box-shadow: var(--box-shadow);
+
+    transition: background-color .2s;
 }
 
 .price-heart {
     width: 40px;
     height: 36px;
 
-    padding: 30px 28.5px;
+    padding: 30px;
 
     background-color: var(--secondary-color);
 
@@ -885,7 +894,7 @@ main {
 
     box-sizing: content-box;
 
-    border-radius: 44px;
+    border-radius: 30%;
 }
 
 .price-price h3 {
@@ -1123,14 +1132,24 @@ main {
     text-align: center;
 }
 
-.newsletter-label {
+.newsletter-form {
     display: flex;
-
     align-items: center;
+
+    width: 100%;
+    max-width: 800px;
 }
 
-.newsletter-email input {
-    width: 688px;
+.newsletter-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-label input {
+    flex: 1;
+
+    width: 700px;
     height: 58px;
 
     padding-left: 20px;
@@ -1138,17 +1157,28 @@ main {
     border: 1px solid;
     border-radius: 5px;
 
+    color: var(--text-color);
     background-color: #fafafa;
 }
 
-.newsletter-email button {
-    padding: 15px 22.5px;
+.newsletter-label input::placeholder {
+    color: var(--second-text-color);
+}
+
+.newsletter-label .newsletter-button {
+    height: 58px;
+    padding-inline: 22.5px;
 
     color: var(--light-color-text);
-    background-color: var(--primary-text-color);
+    background-color: var(--background-color-dark);
 
+    border: 2px solid var(--background-color-dark);
+}
+
+.newsletter-button:hover {
     border: 2px solid var(--primary-text-color);
-    border-radius: 5px;
+
+    background-color: var(--primary-text-color);
 }
 
 /*rodapé*/
@@ -1167,7 +1197,7 @@ footer {
 .footer-links {
     display: flex;
 
-    gap: 30px;
+    gap: 50px;
     padding: 0 0 52px 0;
 }
 
@@ -1234,4 +1264,8 @@ footer {
     display: flex;
 
     gap: 20.5px;
+}
+
+.rights-social a {
+    display: flex;
 }

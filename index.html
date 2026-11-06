@@ -16,10 +16,10 @@
         <h3>BrandName</h3>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Product</a>
-            <a href="#">Pricing</a>
-            <a href="#">Contact</a>
+            <a href="#welcome">Home</a>
+            <a href="#product">Product</a>
+            <a href="#price">Pricing</a>
+            <a href="#newsletter">Contact</a>
 
             <div class="log">
                 <a href="#">Login</a>
@@ -31,7 +31,7 @@
 
     <main>
         <!--welcome-->
-        <section class="welcome">
+        <section id="welcome" class="welcome">
             <div class="welcome-text">
                 <h5>Welcome</h5>
 
@@ -129,7 +129,7 @@
         </section>
 
         <!--produtcs-->
-        <section class="product">
+        <section id="product" class="product">
             <div class="product-text">
                 <h6>Practice Advice</h6>
 
@@ -296,7 +296,7 @@
         </section>
 
         <!--price-->
-        <section class="price">
+        <section id="price" class="price">
             <div class="price-text">
                 <h6>Practice Advice</h6>
 
@@ -567,7 +567,7 @@
         </section>
 
         <!--newsletter-->
-        <section class="newsletter">
+        <section id="newsletter" class="newsletter">
             <div class="newsletter-text">
                 <h6>Newsletter</h6>
 
@@ -577,12 +577,12 @@
                     the two major realms of Classical physics: Newtonian mechanics </p>
             </div>
 
-            <div class="newsletter-label">
-                <label class="newsletter-email">
-                    <input type="email" name="email" placeholder="Seu Email">
-                    <button>Subscribe</button>
+            <form class="newsletter-form" action="#" method="post">
+                <label class="newsletter-label">
+                    <input class="newsletter-input" type="email" name="email" placeholder="Seu Email" required>
+                    <button class="newsletter-button" type="submit">Subscribe</button>
                 </label>
-            </div>
+            </form>
         </section>
     </main>
 
@@ -664,9 +664,17 @@
             <h6>© All Right Reserved</h6>
 
             <div class="rights-social">
-                <img src="./assets/img/vector/social/Vector-facebook.png" alt="facebook">
-                <img src="./assets/img/vector/social/Vector-instagram.png" alt="instagram">
-                <img src="./assets/img/vector/social/Vector-twitter.png" alt="twitter">
+                <a href="#">
+                    <img src="./assets/img/vector/social/Vector-facebook.png" alt="facebook">
+                </a>
+
+                <a href="#">
+                    <img src="./assets/img/vector/social/Vector-instagram.png" alt="instagram">
+                </a>
+
+                <a href="#">
+                    <img src="./assets/img/vector/social/Vector-twitter.png" alt="twitter" class="twitter">
+                </a>
             </div>
         </section>
     </footer>
