@@ -4,14 +4,14 @@
     --alert-color: #E77C40;
     --background-color-dark: #26335D;
     --danger-color: #E74040;
-    --disablad-elemet-color: #8EC2F2;
+    --disabled-element-color: #8EC2F2;
     --faded-secundary-color: #DDEEFE;
     --light-color-text: #FFFFFF;
     --muted-text-color: #BDBDBD;
     --primary-text-color: #FF6551;
     --second-text-color: #737373;
-    --secundary-color: #2435A1;
-    --secundary-text-color: #2435A1;
+    --secondary-color: #2435A1;
+    --secondary-text-color: #2435A1;
     --success-text-color: #2DC071;
     --text-color: #252B42;
 
@@ -150,7 +150,7 @@ a {
 }
 
 button {
-    font-family: var(--button-size);
+    font-size: var(--button-size);
     font-weight: var(--button-weight);
     line-height: var(--button-line-height);
     letter-spacing: var(--button-letter-spacing);
@@ -294,8 +294,9 @@ main {
 }
 
 .welcome-button-2:hover {
-    color: var(--light-color-text);
-    background-color: var(--primary-text-color);
+    color: var(--primary-text-color);
+    background-color: var(--light-color-text);
+    border: 2px solid var(--light-color-text);
 }
 
 .welcome-img {
@@ -340,7 +341,7 @@ main {
     width: 94px;
     height: 7px;
 
-    background-color: var(--secundary-color);
+    background-color: var(--secondary-color);
 }
 
 .about-text h2 {
@@ -362,7 +363,7 @@ main {
 }
 
 .about-text a:hover {
-    color: var(--secundary-text-color);
+    color: var(--secondary-text-color);
 
     border-bottom: 2px solid var(--primary-text-color);
 
@@ -399,7 +400,7 @@ main {
     width: 94px;
     height: 7px;
 
-    background-color: var(--secundary-color);
+    background-color: var(--secondary-color);
 }
 
 .course-text h2 {
@@ -421,7 +422,7 @@ main {
 }
 
 .course-text a:hover {
-    color: var(--secundary-text-color);
+    color: var(--secondary-text-color);
 
     border-bottom: 2px solid var(--primary-text-color);
 
@@ -606,24 +607,37 @@ main {
 
 .product-products {
     display: flex;
+    align-items: center;
     justify-content: center;
+
+    gap: 20px;
 }
 
 .product-type {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    padding: 10px;
+    box-shadow: var(--box-shadow);
 }
 
 .product-type-img {
+    display: flex;
+    justify-content: center;
+
     width: 348px;
     height: 300px;
+
+    position: relative;
+    overflow: hidden;
 }
 
 .product-type-img img {
-    width: 348px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 .product-badge-bottom .favorite {
@@ -647,20 +661,71 @@ main {
     object-fit: cover;
 }
 
-.product-badge-top {}
+.product-badge-top {
+    position: absolute;
+    top: 12px;
+    left: 12px;
 
-.product-badge-bottom {}
+    padding: 2px 10px;
+
+    font-size: var(--small-size);
+    font-weight: 600;
+    line-height: 20px;
+
+    color: var(--light-color-text);
+    background-color: var(--danger-color);
+
+    border-radius: 2px;
+}
+
+.product-badge-bottom {
+    display: flex;
+
+    position: absolute;
+
+    bottom: 12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    gap: 10px;
+}
+
+.product-badge-bottom button {
+    display: grid;
+    place-items: center;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: var(--light-color-text);
+
+    border-radius: 50%;
+
+    transition: transform .2s;
+}
+
+.product-badge-bottom button:hover {
+    transform: scale(1.1);
+}
+
+.product-badge-bottom img {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+}
 
 .product-type h5 {
     color: var(--text-color);
 
-    max-width: 161px;
+    width: 161px;
 }
 
 .product-type p {
     color: var(--second-text-color);
 
-    max-width: 280px;
+    width: 280px;
 }
 
 .product-space {
@@ -683,7 +748,7 @@ main {
 
     font-weight: 600;
 
-    max-width: 130px;
+    width: 130px;
 }
 
 .product-star {
@@ -715,6 +780,8 @@ main {
     display: flex;
 
     gap: 10px;
+
+    width: 54px;
 }
 
 .product-price .price-official {
@@ -727,6 +794,7 @@ main {
 
 .product-space .product-button {
     padding: 10px 20px;
+    margin-top: 20px;
     margin-left: 25%;
 
     border: 2px solid var(--primary-text-color);
@@ -787,10 +855,10 @@ main {
 
 .price-description {
     display: flex;
+    align-items: center;
     justify-content: center;
 
-    gap: 31px;
-    padding: 50px 40px;
+    gap: 29.5px;
 }
 
 .price-price {
@@ -802,49 +870,30 @@ main {
     gap: 35px;
     padding: 50px 40px;
 
-    min-width: 330px;
-    min-height: 980px;
-
     box-shadow: var(--box-shadow);
 }
 
-.price-price:hover {
-    background-color: var(--background-color-dark);
+.price-heart {
+    width: 40px;
+    height: 36px;
 
-    cursor: pointer;
-}
+    padding: 30px 28.5px;
 
-.price-price .heart {
+    background-color: var(--secondary-color);
+
+    object-fit: cover;
+
     box-sizing: content-box;
 
-    border-radius: 200px;
-
-    width: 40px;
-    height: auto;
-
-    padding: 20px;
-
-    background-color: var(--secundary-color);
+    border-radius: 44px;
 }
 
 .price-price h3 {
     color: var(--text-color);
-
-    max-width: 64px;
-}
-
-.price-price:hover h3 {
-    color: var(--light-color-text);
 }
 
 .price-price h6 {
     color: var(--second-text-color);
-
-    max-width: 147px;
-}
-
-.price-price:hover h6 {
-    color: var(--light-color-text);
 }
 
 .price-months {
@@ -855,50 +904,38 @@ main {
 
 .price-months h2 {
     color: var(--primary-text-color);
-
-    max-width: 68px;
 }
 
 .price-months h6 {
-    color: var(--disablad-elemet-color);
-
-    max-width: 79px;
+    color: var(--disabled-element-color);
 }
 
 .price-price p {
+    width: 200px;
+
+    text-align: center;
+
     color: var(--second-text-color);
-
-    max-width: 200px;
-}
-
-.price-price:hover p {
-    color: var(--light-color-text);
 }
 
 .price-price button {
-    max-width: 250px;
-
     color: var(--light-color-text);
     background-color: var(--primary-text-color);
 
-    padding: 15px 84px;
-
     border: 2px solid transparent;
     border-radius: 5px;
+
+    padding: 15px 84px;
 }
 
 .price-price button:hover {
-    background-color: var(--background-color-dark);
-
-    border: 2px solid var(--primary-text-color);
+    color: var(--primary-text-color);
+    background-color: var(--light-color-text);
 }
 
 .list {
     display: flex;
     flex-direction: column;
-
-    max-width: 250px;
-    max-height: 236px;
 
     gap: 15px;
 }
@@ -906,29 +943,46 @@ main {
 .list-list {
     display: flex;
     align-items: center;
+
+    gap: 10px;
 }
 
 .list-list img {
     box-sizing: content-box;
 
-    width: 16px;
-    height: 11.13px;
+    background-color: var(--success-text-color);
 
-    padding: 15px;
+    padding: 10px 7.5px;
 
     border-radius: 200px;
-
-    background-color: var(--success-text-color);
-}
-
-.list-list img .check-none {
-    background-color: var(--muted-text-color);
 }
 
 .list-list h6 {
-    padding: 4px 10px;
+    color: var(--text-color);
+}
 
-    max-width: 175px;
+#check-none {
+    background-color: var(--muted-text-color);
+}
+
+.price-price:hover {
+    background-color: var(--background-color-dark);
+}
+
+.price-price:hover h3 {
+    color: var(--light-color-text);
+}
+
+.price-price:hover h6 {
+    color: var(--light-color-text);
+}
+
+.price-price:hover .price-months h6 {
+    color: var(--disabled-element-color);
+}
+
+.price-price:hover p {
+    color: var(--light-color-text);
 }
 
 /*testimonials*/
