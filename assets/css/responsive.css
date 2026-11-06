@@ -1,153 +1,79 @@
-@media (min-width: 480px) {
+@media (max-width: 1199px) {
+    :root { --gutter: 60px; }
 
-    .newsletter-form {
-        flex-direction: row;
-        gap: 0;
-    }
+    header { gap: 40px; }
 
-    .newsletter-form input {
-        border-radius: 5px 0 0 5px;
-    }
+    .welcome { gap: 64px; }
 
-    .newsletter-form .btn {
-        border-radius: 0 5px 5px 0;
-    }
+    .course-text { padding-left: 0; }
 }
 
-@media (min-width: 640px) {
-    :root {
-        --gutter: 32px;
-    }
+@media (max-width: 959px) {
+    :root { --gutter: 40px; }
 
-    .footer-links {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+    .menu-toggle { display: grid; }
 
-    .links--contact {
-        grid-column: auto;
-    }
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
 
-    .price-badge {
-        top: -32px;
-        right: -16px;
-        width: 76px;
-        height: 76px;
-    }
-}
-
-@media (min-width: 768px) {
-    :root {
-        --gutter: 40px;
-    }
-
-    .brands img {
-        width: var(--w);
-    }
-}
-
-@media (min-width: 960px) {
-    :root {
-        --gutter: 60px;
-    }
-
-    .site-header {
-        gap: 56px;
-    }
-
-    .menu-toggle {
         display: none;
+        flex: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        padding: 24px var(--pad-inline) 32px;
+
+        background-color: var(--background-color-dark);
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .25);
     }
 
-    .site-menu {
-        position: static;
+    header.is-open .menu { display: flex; }
 
-        display: flex;
-        flex: 1;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-        padding: 0;
-
-        background: none;
-        border: 0;
-        box-shadow: none;
-    }
-
-    .nav {
-        flex-direction: row;
-        gap: 21px;
-    }
-
-    .log {
-        flex-wrap: nowrap;
-        gap: 45px;
-    }
+    nav { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .log { flex-wrap: wrap; gap: 24px; }
 
     .welcome,
     .about,
-    .course {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 64px;
-    }
+    .course { grid-template-columns: minmax(0, 1fr); gap: 48px; }
 
-    .welcome-text {
-        padding-block: 40px;
-    }
+    .welcome-text { max-width: none; padding: 0; }
+    .welcome-img img { margin-inline: auto; }
 
-    .about {
-        gap: clamp(64px, 11vw, 156px);
-    }
+    .course-text { max-width: none; }
 
-    .course {
-        gap: 48px;
-    }
-
-    .course-text {
-        padding-left: 60px;
-    }
-
-    .footer-links {
-        grid-template-columns: repeat(4, minmax(0, 1fr)) 1.6fr;
-    }
-
-    .links--contact {
-        grid-column: auto;
-    }
+    .footer-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .footer-links .links:last-child { grid-column: 1 / -1; }
 }
 
-@media (min-width: 1200px) {
-    :root {
-        --gutter: 100px;
-    }
+@media (max-width: 767px) {
+    :root { --gutter: 32px; }
 
-    .welcome {
-        gap: 120px;
-    }
-
-    .product-products {
-        flex-wrap: nowrap;
-    }
-
-    .price-badge {
-        top: -45px;
-        right: -35px;
-        width: 90px;
-        height: 90px;
-    }
+    .brands { gap: 32px 48px; padding-block: 56px; }
 }
 
-/* telas muito pequenas (<= 360px) */
-@media (max-width: 360px) {
-    .welcome-button .btn {
-        flex: 1 1 100%;
-    }
+@media (max-width: 599px) {
+    :root { --gutter: 20px; }
 
-    .course-card-course {
-        padding: 28px 24px;
-    }
+    .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-    .price-price {
-        padding-inline: 20px;
-    }
+    .newsletter-text br { display: none; }
+
+    .newsletter-email { flex-direction: column; gap: 12px; }
+    .newsletter-email input { height: 54px; border-radius: 5px; }
+    .newsletter-email button { height: 54px; border-radius: 5px; }
+
+    .welcome-button button { flex: 1 1 auto; }
+}
+
+@media (max-width: 359px) {
+    .welcome-button button { flex: 1 1 100%; }
+
+    .course-card-course { padding: 28px 24px; }
+    .price-price { padding-inline: 20px; }
+    .testimonials-card { padding: 20px 12px; }
 }
